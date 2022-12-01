@@ -1,0 +1,228 @@
+dataset_names: ['Cora', 'Citeseer', 'Photo']
+diff_methods: ['none', 'heat', 'ppr']
+
+
+paper_results:
+    Cora:
+        GCN:
+            none: 81.71
+            heat: 83.48
+            ppr: 83.58
+        GAT:
+            none: 80.10
+            heat: 81.54
+            ppr: 81.60
+        JK:
+            none: 82.14
+            heat: 83.69
+            ppr: 83.78
+    Citeseer:
+        GCN:
+            none: 72.02
+            heat: 73.22
+            ppr: 73.35
+        GAT:
+            none: 69.52
+            heat: 70.25
+            ppr: 68.50
+        JK:
+            none: 70.34
+            heat: 72.38
+            ppr: 72.24
+    Photo:
+        GCN:
+            none: 92.08
+            heat: 92.82
+            ppr: 92.20
+        GAT:
+            none: 53.40
+            heat: 91.86
+            ppr: 90.89
+        JK:
+            none: 91.07
+            heat: 92.93
+            ppr: 92.37
+
+
+GCN:
+    none:
+        Cora:
+            weight_decay: 0.059
+            depth: 1
+        
+        Citeseer:
+            weight_decay: 10.0
+            depth: 1
+        
+        Photo:
+            weight_decay: 0.03
+            depth: 1
+    
+    
+    heat:
+        Cora:
+            t: 5
+            k: 
+            eps: 0.0001
+            weight_decay: 0.086
+            depth: 1
+        
+        Citeseer:
+            t: 4
+            k: 
+            eps: 0.0009
+            weight_decay: 10.0
+            depth: 1
+        
+        Photo:
+            t: 3
+            k: 
+            eps: 0.0001
+            weight_decay: 0.08
+            depth: 2
+    
+    ppr:
+        Cora:
+            alpha: 0.05
+            k: 128
+            eps: 
+            weight_decay: 0.096
+            depth: 1
+        
+        Citeseer:
+            alpha: 0.10
+            k: 
+            eps: 0.0009
+            weight_decay: 10.0
+            depth: 1
+        
+        Photo:
+            alpha: 0.15
+            k: 64
+            eps: 
+            weight_decay: 0.03
+            depth: 1
+
+            
+            
+
+GAT:
+    none:
+        Cora:
+            weight_decay: 0.08
+            depth: 1
+        
+        Citeseer:
+            weight_decay: 0.08
+            depth: 1
+        
+        Photo:
+            weight_decay: 0.06
+            depth: 1
+    
+    
+    heat:
+        Cora:
+            t: 1
+            k: 
+            eps: 0.0010
+            weight_decay: 0.04
+            depth: 1
+        
+        Citeseer:
+            t: 1
+            k: 
+            eps: 0.0010
+            weight_decay: 0.08
+            depth: 1
+        
+        Photo:
+            t: 1
+            k: 
+            eps: 0.0005
+            weight_decay: 0.01
+            depth: 1
+    
+    ppr:
+        Cora:
+            alpha: 0.10
+            k: 
+            eps: 0.0050
+            weight_decay: 0.08
+            depth: 1
+        
+        Citeseer:
+            alpha: 0.10
+            k: 
+            eps: 0.0005
+            weight_decay: 0.10
+            depth: 1
+        
+        Photo:
+            alpha: 0.10
+            k: 
+            eps: 0.0005
+            weight_decay: 0.07
+            depth: 2
+
+
+
+
+JK:
+    none:
+        Cora:
+            weight_decay: 0.04
+            depth: 3
+        
+        Citeseer:
+            weight_decay: 1.00
+            depth: 4
+        
+        Photo:
+            weight_decay: 0.03
+            depth: 2
+    
+    
+    heat:
+        Cora:
+            t: 5
+            k: 
+            eps: 0.0001
+            weight_decay: 0.09
+            depth: 2
+        
+        Citeseer:
+            t: 4
+            k: 
+            eps: 0.0009
+            weight_decay: 1.00
+            depth: 2
+        
+        Photo:
+            t: 3
+            k: 
+            eps: 0.0005
+            weight_decay: 0.07
+            depth: 2
+    
+    ppr:
+        Cora:
+            alpha: 0.05
+            k: 128
+            eps: 
+            weight_decay: 0.10
+            depth: 2
+        
+        Citeseer:
+            alpha: 0.20
+            k: 
+            eps: 0.0009
+            weight_decay: 1.00
+            depth: 2
+        
+        Photo:
+            alpha: 0.15
+            k: 64
+            eps: 
+            weight_decay: 0.03
+            depth: 2
